@@ -6,7 +6,7 @@
 ## Scenario:
 
 
-## What I Leanred:
+## What I Learned:
 
 ## PACE: Plan 📝
 **1) Imports, Links, and Loading:**
