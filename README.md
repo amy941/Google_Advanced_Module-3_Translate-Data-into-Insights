@@ -104,7 +104,7 @@ plt.show()
 
 🔁 Write similar code blocks for ```video_view_count```, ```video_comment_count```, ```video_share_count``, ```video_download_count```
 
-⚠️⚠️⚠️ Check out my work here: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
+⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
 ```python
 plt.figure(figsize=(5,3))
@@ -133,7 +133,7 @@ plt.show()
 
 ✍️ ```labels = [str(i) + 'k' for i in range(0, 701, 100)] ```: use for loops to iterate over ```range(0,701,100)``` (start from 0 to 700 in steps of 100). Each number ``i``` is converted into a string and ```k``` is added to show values in a more readable way (ex: 100k intead of 100000).
 
-⚠️⚠️⚠️ Check out my work here: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
+⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
 -----
 **Create HISTOGRAM for claim status**
@@ -166,17 +166,87 @@ plt.show()
 
 ✍️ ```ban_status_counts = data.groupby(['author_ban_status']).median(numeric_only=True).reset_index()```
 
+- First, using **.groupby()** function to combine all rows with the same data into a single row. In this case, we only care for ```author_ban_status``` column, with 3 statuses: active, under review, and banned.
+  
+- Next, using **.median(numeric_only=True)** to compute the median (middle value) for all numeric columns within each group. The argument ```numeric_only=True``` ensures that only numeric columns are captured, ignoring non-numeric values like strings
+  
+- Finally, using **.reset_index()** positions ```author_ban_status``` as regular column instead of an index, making the dataframe easier to work with.
+  
+
+✍️ ```sns.barplot(....)```: 
+
+- First, using **sns.barplot()** to plot a bar graph using seaborn package.
+
+- Then, **define the dataframe** that contains the data for the plot, ```data=ban_status_counts,```
+
+- Next:
+
+**set the x-axis** to represent the ```author_ban_status``` column which has 3 categories: 'active', 'under review', and 'banned'.
+
+**set the y-axis** to display values from ```video_view_count``` column which contains median view counts per each ban status ('active', 'under review', 'banned')
+
+**order=[]** and **palette={}** to define the order and custom colors for each category.
+
+**alpha=0.5** to set the transparency of the bar. 0 is fully transparent, 0.5 is semi-transparent, and 1 is fully opaque.
 
 
+⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
-✍️ 
-
-
-
-⚠️⚠️⚠️ Check out my work here: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
 ---
+**Determine Outliers**
+
+```python
+count_cols = ['video_view_count',
+              'video_like_count',
+              'video_share_count',
+              'video_download_count',
+              'video_comment_count',
+              ]
+
+for column in count_cols:
+    q1 = data[column].quantile(0.25)
+    q3 = data[column].quantile(0.75)
+    iqr = q3 - q1
+    median = data[column].median()
+    outlier_threshold = median + 1.5*iqr
+
+    # Count the number of values that exceed the outlier threshold
+    outlier_count = (data[column] > outlier_threshold).sum()
+    print(f'Number of outliers, {column}:', outlier_count)
+```
+
+✍️
+- A **for loop** was created to iterate over the column names of each count variable.
+  
+- **25th percentile (Q1)** and **75th percentile (Q2)** of count variables were determined.
+  
+- Take the difference between Q1 and Q2 to find the **interquartile range (IQR)**
+
+- Calculate the **median** of the column, then find the **outlier threshold** =(median + 1.5*IQR)
+
+- Count the number of values that exceeds the outlier threshold then print the output values.
+
+![outliers](https://github.com/user-attachments/assets/2df4909c-5da7-4b6f-89c3-e951bfe61da7)
+
+
+**Scatterplot**
+
+```python
+sns.scatterplot(x=data["video_view_count"], 
+                y=data["video_like_count"],
+                hue=data["claim_status"], 
+                s=10, 
+                alpha=0.3)
+
+plt.show()
+```
+
+![scatterplot](https://github.com/user-attachments/assets/709bb0df-689f-40f9-b988-a8edfa5d6191)
 
 
 # PACE: Execute 🤝
+
+- Results and Evaluation:
+  * 
 
