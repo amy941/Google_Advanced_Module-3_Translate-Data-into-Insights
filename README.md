@@ -85,7 +85,7 @@ plt.show()
 
 ✍️ ```sns.boxplot(x=data['video_duration_sec'])```: *sns.boxplot()* function takes positional argument of x, representing the x-axis in the data. The x-axis will represent the ```video_duration_sec``` column from the df. 
 
-🔁 Write similar code blocks for ```video_view_count```, ```video_like_count```, ```video_comment_count```, ```video_share_count```, ```video_download_count```
+🔁 Write similar code blocks for ```video_view_count```, ```video_like_count```, ```video_comment_count```, ```video_share_count```, ```video_download_count```. The rest of my work: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
 ```python
 plt.figure(figsize=(5,3))
@@ -104,7 +104,7 @@ plt.show()
 
 🔁 Write similar code blocks for ```video_view_count```, ```video_comment_count```, ```video_share_count``, ```video_download_count```
 
-⚠️⚠️⚠️ Check out my work here:
+⚠️⚠️⚠️ Check out my work here: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
 ```python
 plt.figure(figsize=(5,3))
@@ -133,8 +133,10 @@ plt.show()
 
 ✍️ ```labels = [str(i) + 'k' for i in range(0, 701, 100)] ```: use for loops to iterate over ```range(0,701,100)``` (start from 0 to 700 in steps of 100). Each number ``i``` is converted into a string and ```k``` is added to show values in a more readable way (ex: 100k intead of 100000).
 
+⚠️⚠️⚠️ Check out my work here: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
-### Create HISTOGRAM for claim status
+-----
+**Create HISTOGRAM for claim status**
 
 - Claim status by verification status
 - Claim status by author ban status
@@ -171,7 +173,7 @@ plt.show()
 
 
 
-
+⚠️⚠️⚠️ Check out my work here: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
 ---
 
