@@ -4,6 +4,7 @@
 ## Link here: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
 ## Scenario:
+The TikTok data team aims to develop a machine learning model to classify claims from user submissions, requiring data analysis and preparation before model building. At this stage, they performed exploratory data analysis (EDA) to understand how videos impact users. The analysis focused on key engagement metrics such as view count, like count, and comment coun
 
 ---
 
@@ -244,7 +245,7 @@ plt.show()
 
 ⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
-
+---
 # PACE: Execute 🤝
 
 **- Results and Evaluation:**
