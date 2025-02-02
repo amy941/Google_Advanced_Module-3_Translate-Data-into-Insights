@@ -49,11 +49,11 @@ data = pd.read_csv("tiktok_dataset.csv")
 
 ✍️ ```.info()```: provide **total number of rows** (19,382) **and columns** (12), also state the **names and data types** of each column and **the size** of the df.
 
-📸📸📸📸
+![info](https://github.com/user-attachments/assets/f0e528eb-5b3b-4617-91cf-cf0e16dcc966)
 
-```.describe()```: generate a table of **descriptive stats.**
+✍️ ```.describe()```: generate a table of **descriptive stats.**
 
-📸📸📸📸
+![describe](https://github.com/user-attachments/assets/e56edd89-a1cc-46bb-b184-e6a4de071f36)
 
 ⚠️⚠️⚠️ **Things should notice:**
   
@@ -70,7 +70,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 # PACE: Construct 📊
 ### **3) Build visualizations:**
 
-### Create a **BOX PLOT** and **HISTOGRAM** to examine columns of *count* variables (ex: video_duration_sec, video_view_count, video_like_count,...)
+Create a **BOX PLOT** and **HISTOGRAM** to examine columns of ```count``` variables (ex: video_duration_sec, video_view_count, video_like_count,...)
 
 ```python
 plt.figure(figsize=(7,1))
@@ -80,7 +80,8 @@ sns.boxplot(x=data['video_duration_sec'])
 
 plt.show()
 ```
-📸📸📸📸
+![boxplot_1](https://github.com/user-attachments/assets/898ee013-9ace-4047-a31a-d80ac1618841)
+
 
 ✍️ ```sns.boxplot(x=data['video_duration_sec'])```: *sns.boxplot()* function takes positional argument of x, representing the x-axis in the data. The x-axis will represent the ```video_duration_sec``` column from the df. 
 
@@ -95,7 +96,7 @@ sns.histplot(data['video_duration_sec'], bins=range(0, 61, 5))  #start, stop, st
 plt.show()
 ```
 
-📸📸📸📸
+![hist_1](https://github.com/user-attachments/assets/0677cd51-6254-43ac-9583-8cd75b43b03e)
 
 ✍️ ```sns.histplot(x, bins, binrange, binwidth, ...)```: to generate a histogram in seaborn.
 - x: a sequence of values representing the data you want to plot.
@@ -123,7 +124,7 @@ ax.set_xticklabels(labels)
 plt.show()
 ```
 
-📸📸📸📸
+![hist_2](https://github.com/user-attachments/assets/f8d62a96-59da-4dc8-8172-423dc95f0ce9)
 
 ✍️ ```sns.histplot(data['video_like_count'], bins=range(0, (7 * 10**5 + 1), 10**5))```: As we observed from the summary table for descriptive stats in step 2, the maximum of ```video_like_count``` is around 660,000 likes. Thus, we have to customize the bin range and bin width accordingly.
 - Start from 0 up to....
@@ -158,7 +159,7 @@ sns.barplot(data=ban_status_counts,
 plt.show()
 ```
 
-📸📸📸📸
+![bar_median](https://github.com/user-attachments/assets/6b429f95-fe92-405c-92ae-643f05faa149)
 
 
 ✍️ ```ban_status_counts = data.groupby(['author_ban_status']).median(numeric_only=True).reset_index()```
@@ -166,14 +167,7 @@ plt.show()
 
 
 
-✍️ ```sns.barplot(data=ban_status_counts,
-             x= 'author_ban_status',
-             y= 'video_view_count',
-             order= ['active', 'under review', 'banned'],
-             palette= {'active':'green', 'under review':'orange', 'banned':'red'},
-             alpha= 0.5
-)
-```
+✍️ 
 
 
 
