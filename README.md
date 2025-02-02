@@ -55,7 +55,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 
 ![describe](https://github.com/user-attachments/assets/e56edd89-a1cc-46bb-b184-e6a4de071f36)
 
-⚠️⚠️⚠️ **Things should notice:**
+🔴 **Things should notice:**
   
 * video_duration_sec: max = 60
 * video_view_count: max = ~1,000,000 (1e6)
