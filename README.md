@@ -1,15 +1,15 @@
 # OVERVIEW:
 
 # Case Study: TikTok 🎵
-## Link here: [Case Study: TikTok](............)
+## Link here: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
 ## Scenario:
 
 
-## What I Learned:
 
-## PACE: Plan 📝
-**1) Imports, Links, and Loading:**
+
+# PACE: Plan 📝
+### **1) Imports, Links, and Loading:**
 
 ```python
 import numpy as np
@@ -23,23 +23,26 @@ data = pd.read_csv("tiktok_dataset.csv")
 ```
 
 ✍️ Library/package:
+
 **- NumPy:** for *vector and matrix computations.*
+
 **- Pandas:** for manipulating and analyzing *tabular data.*
+
 **- matplotlib and seaborn:** to create *graphs, charts, and other data viz.*
 
   
 ---
 
-## PACE: Analyze 🔎
-**2) Inspect the data:**
+# PACE: Analyze 🔎
+### **2) Inspect the data:**
 
 - ```.head()```, ```.size```, ```.shape```
 
 ✍️ ```.head()```: **display the first few rows** of the df.
 
-  ```.size```: **# of rows multiple by # of columns** in a df.
+```.size```: **# of rows multiple by # of columns** in a df.
     
-  ```.shape```: an attribute in Python, will output **the dimension** of a dataset as: ([rows] , [columns])
+```.shape```: an attribute in Python, will output **the dimension** of a dataset as: ([rows] , [columns])
 
       
 - ```.info()```, ```.describe()```
@@ -48,7 +51,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 
 📸📸📸📸
 
-```.describe()``: generate a table of **descriptive stats.**
+```.describe()```: generate a table of **descriptive stats.**
 
 📸📸📸📸
 
@@ -64,8 +67,8 @@ data = pd.read_csv("tiktok_dataset.csv")
 
 ---
 
-## PACE: Construct 📊
-**3) Build visualizations:**
+# PACE: Construct 📊
+### **3) Build visualizations:**
 
 ### Create a **BOX PLOT** and **HISTOGRAM** to examine columns of *count* variables (ex: video_duration_sec, video_view_count, video_like_count,...)
 
@@ -179,5 +182,5 @@ plt.show()
 ---
 
 
-## PACE: Execute 🤝
+# PACE: Execute 🤝
 
