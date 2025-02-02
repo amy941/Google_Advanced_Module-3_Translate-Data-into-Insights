@@ -9,7 +9,7 @@
 
 
 # PACE: Plan 📝
-### **1) Imports, Links, and Loading:**
+### **Task 1) Imports, Links, and Loading:**
 
 ```python
 import numpy as np
@@ -34,7 +34,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 ---
 
 # PACE: Analyze 🔎
-### **2) Inspect the data:**
+### **Task 2) Inspect the data:**
 
 - ```.head()```, ```.size```, ```.shape```
 
@@ -68,7 +68,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 ---
 
 # PACE: Construct 📊
-### **3) Build visualizations:**
+### **task 3) Build visualizations:**
 
 Create a **BOX PLOT** and **HISTOGRAM** to examine columns of ```count``` variables (ex: video_duration_sec, video_view_count, video_like_count,...)
 
@@ -194,7 +194,7 @@ plt.show()
 
 
 ---
-**Determine Outliers**
+### **Task 4) Determine Outliers**
 
 ```python
 count_cols = ['video_view_count',
@@ -215,6 +215,7 @@ for column in count_cols:
     outlier_count = (data[column] > outlier_threshold).sum()
     print(f'Number of outliers, {column}:', outlier_count)
 ```
+![outliers](https://github.com/user-attachments/assets/2df4909c-5da7-4b6f-89c3-e951bfe61da7)
 
 ✍️
 - A **for loop** was created to iterate over the column names of each count variable.
@@ -226,8 +227,6 @@ for column in count_cols:
 - Calculate the **median** of the column, then find the **outlier threshold** =(median + 1.5*IQR)
 
 - Count the number of values that exceeds the outlier threshold then print the output values.
-
-![outliers](https://github.com/user-attachments/assets/2df4909c-5da7-4b6f-89c3-e951bfe61da7)
 
 
 **Scatterplot**
@@ -242,11 +241,22 @@ sns.scatterplot(x=data["video_view_count"],
 plt.show()
 ```
 
-![scatterplot](https://github.com/user-attachments/assets/709bb0df-689f-40f9-b988-a8edfa5d6191)
+⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
 
 # PACE: Execute 🤝
 
-- Results and Evaluation:
-  * 
+**- Results and Evaluation:**
+  
+  * In task 3 - Building visualizations: We explored the spread of values and the distribution for each ```count``` variable. Most of ``count`` variables are skewed to the right (except for ```video_duration_sec``` which resulted in a normal distribution).
+    
+  * Also in task 3, after investigating the median view counts by ban status, we noticed the median view counts for non-active authors are much greater than the median view counts for active authors. Since under review/banned authors are more likely to post claims, thus, their videos attract more views.
 
+  * In task 4 - Determine Outliers, because the values for the ```count``` variables are heavily skewed to the right as we examined in task 3, thus, defining an outlier by calculating the interquartile range (IQR) and set a threshold that is 1.5 * IQR above the 3rd quartile was the best solution to conduct.
+ 
+
+**- Conclusions:** 
+
+  * Exploratory Data Analysis (EDA) helps a data professional to get to know the data, understand its outliers, clean its missing values, and prepare it for future modeling.
+
+  * Data viz helps me understand that we will need to make decisions on certain considerations before designing a model.
