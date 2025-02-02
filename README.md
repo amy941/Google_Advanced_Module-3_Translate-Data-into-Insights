@@ -240,6 +240,7 @@ sns.scatterplot(x=data["video_view_count"],
 
 plt.show()
 ```
+![scatterplot](https://github.com/user-attachments/assets/709bb0df-689f-40f9-b988-a8edfa5d6191)
 
 ⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
 
