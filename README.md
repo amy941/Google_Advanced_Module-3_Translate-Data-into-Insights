@@ -49,7 +49,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 
 ✍️ ```.info()```: provide **total number of rows** (19,382) **and columns** (12), also state the **names and data types** of each column and **the size** of the df.
 
-![boxplot_1](https://github.com/user-attachments/assets/2d2aa5b0-37e4-41c0-baf3-0a2657ed1e25)
+![info](https://github.com/user-attachments/assets/f0e528eb-5b3b-4617-91cf-cf0e16dcc966)
 
 ✍️ ```.describe()```: generate a table of **descriptive stats.**
 
@@ -80,7 +80,7 @@ sns.boxplot(x=data['video_duration_sec'])
 
 plt.show()
 ```
-![boxplot_1](https://github.com/user-attachments/assets/898ee013-9ace-4047-a31a-d80ac1618841)
+![boxplot_1](https://github.com/user-attachments/assets/2d2aa5b0-37e4-41c0-baf3-0a2657ed1e25)
 
 
 ✍️ ```sns.boxplot(x=data['video_duration_sec'])```: *sns.boxplot()* function takes positional argument of x, representing the x-axis in the data. The x-axis will represent the ```video_duration_sec``` column from the df. 
