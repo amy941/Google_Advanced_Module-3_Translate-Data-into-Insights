@@ -49,7 +49,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 
 ✍️ ```.info()```: provide **total number of rows** (19,382) **and columns** (12), also state the **names and data types** of each column and **the size** of the df.
 
-![info](https://github.com/user-attachments/assets/f0e528eb-5b3b-4617-91cf-cf0e16dcc966)
+![boxplot_1](https://github.com/user-attachments/assets/2d2aa5b0-37e4-41c0-baf3-0a2657ed1e25)
 
 ✍️ ```.describe()```: generate a table of **descriptive stats.**
 
