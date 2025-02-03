@@ -4,7 +4,7 @@
 ## Link here: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights/blob/main/Case%20Study_%20TikTok%20.ipynb)
 
 ## Scenario:
-The TikTok data team aims to develop a machine learning model to classify claims from user submissions, requiring data analysis and preparation before model building. At this stage, they performed exploratory data analysis (EDA) to understand how videos impact users. The analysis focused on key engagement metrics such as view count, like count, and comment coun
+The TikTok data team aims to develop a machine learning model to classify claims from user submissions, requiring data analysis and preparation before model building. At this stage, they performed exploratory data analysis (EDA) to understand how videos impact users. The analysis focused on key engagement metrics like view count, like count, comment count, etc.
 
 ---
 
@@ -69,7 +69,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 ---
 
 # PACE: Construct 📊
-### **task 3) Build visualizations:**
+### **Task 3) Build visualizations:**
 
 Create a **BOX PLOT** and **HISTOGRAM** to examine columns of ```count``` variables (ex: video_duration_sec, video_view_count, video_like_count,...)
 
@@ -86,7 +86,7 @@ plt.show()
 
 ✍️ ```sns.boxplot(x=data['video_duration_sec'])```: *sns.boxplot()* function takes positional argument of x, representing the x-axis in the data. The x-axis will represent the ```video_duration_sec``` column from the df. 
 
-🔁 Write similar code blocks for ```video_view_count```, ```video_like_count```, ```video_comment_count```, ```video_share_count```, ```video_download_count```. The rest of my work: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
+🔁 Write similar code blocks for ```video_view_count```, ```video_like_count```, ```video_comment_count```, ```video_share_count```, ```video_download_count```. The rest of my work: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights/blob/main/Case%20Study_%20TikTok%20.ipynb)
 
 ```python
 plt.figure(figsize=(5,3))
@@ -100,12 +100,12 @@ plt.show()
 ![hist_1](https://github.com/user-attachments/assets/0677cd51-6254-43ac-9583-8cd75b43b03e)
 
 ✍️ ```sns.histplot(x, bins, binrange, binwidth, ...)```: to generate a histogram in seaborn.
-- x: a sequence of values representing the data you want to plot.
-- bins: ```bins=range(0, 61, 5)``` defines the x-axis starts from 0, stops at 61, and increments by 5.
+- **x:** a sequence of values representing the data you want to plot.
+- **bins:** ```bins=range(0, 61, 5)``` defines the x-axis starts from 0, stops at 61, and increments by 5.
 
-🔁 Write similar code blocks for ```video_view_count```, ```video_comment_count```, ```video_share_count``, ```video_download_count```
+🔁 Write similar code blocks for ```video_view_count```, ```video_comment_count```, ```video_share_count```, ```video_download_count```
 
-⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
+⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights/blob/main/Case%20Study_%20TikTok%20.ipynb)
 
 ```python
 plt.figure(figsize=(5,3))
@@ -127,14 +127,14 @@ plt.show()
 
 ![hist_2](https://github.com/user-attachments/assets/f8d62a96-59da-4dc8-8172-423dc95f0ce9)
 
-✍️ ```sns.histplot(data['video_like_count'], bins=range(0, (7 * 10**5 + 1), 10**5))```: As we observed from the summary table for descriptive stats in step 2, the maximum of ```video_like_count``` is around 660,000 likes. Thus, we have to customize the bin range and bin width accordingly.
-- Start from 0 up to....
-- 7*(10^5) + 1 = 700,001 = 700K
-- a step of 10^5= 100,000 = 100K
+✍️ ```sns.histplot(data['video_like_count'], bins=range(0, (7 * 10**5 + 1), 10**5))```: As we observed in the summary table for descriptive stats in step 2, the maximum of ```video_like_count``` is around 660,000 likes. Thus, we have to customize the bin range and bin width accordingly.
+- Start from 0 up to 700,000
+- Stops at 7*(10^5) + 1 = 700,001 = 700K
+- A step of 10^5= 100,000 = 100K
 
-✍️ ```labels = [str(i) + 'k' for i in range(0, 701, 100)] ```: use for loops to iterate over ```range(0,701,100)``` (start from 0 to 700 in steps of 100). Each number ``i``` is converted into a string and ```k``` is added to show values in a more readable way (ex: 100k intead of 100000).
+✍️ ```labels = [str(i) + 'k' for i in range(0, 701, 100)] ```: use for loops to iterate over ```range(0,701,100)``` (start from 0 to 701 in steps of 100). Each number ``i``` is converted into a string and ```k``` is added to show values in a more readable way (ex: 100k instead of 100,000).
 
-⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
+⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights/blob/main/Case%20Study_%20TikTok%20.ipynb)
 
 -----
 **Create HISTOGRAM for claim status**
@@ -176,7 +176,7 @@ plt.show()
 
 ✍️ ```sns.barplot(....)```: 
 
-- First, using **sns.barplot()** to plot a bar graph using seaborn package.
+- First, using **sns.barplot()** to plot a bar graph from seaborn package.
 
 - Then, **define the dataframe** that contains the data for the plot, ```data=ban_status_counts,```
 
@@ -191,7 +191,7 @@ plt.show()
 **alpha=0.5** to set the transparency of the bar. 0 is fully transparent, 0.5 is semi-transparent, and 1 is fully opaque.
 
 
-⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
+⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights/blob/main/Case%20Study_%20TikTok%20.ipynb)
 
 
 ---
@@ -219,7 +219,7 @@ for column in count_cols:
 ![outliers](https://github.com/user-attachments/assets/2df4909c-5da7-4b6f-89c3-e951bfe61da7)
 
 ✍️
-- A **for loop** was created to iterate over the column names of each count variable.
+- Create a **for loop** to iterate over the column names of each count variable.
   
 - **25th percentile (Q1)** and **75th percentile (Q2)** of count variables were determined.
   
@@ -227,7 +227,7 @@ for column in count_cols:
 
 - Calculate the **median** of the column, then find the **outlier threshold** =(median + 1.5*IQR)
 
-- Count the number of values that exceeds the outlier threshold then print the output values.
+- Count the number of values that **exceed the outlier threshold** then print the output values.
 
 
 **Scatterplot**
@@ -243,18 +243,18 @@ plt.show()
 ```
 ![scatterplot](https://github.com/user-attachments/assets/709bb0df-689f-40f9-b988-a8edfa5d6191)
 
-⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights)
+⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights/blob/main/Case%20Study_%20TikTok%20.ipynb)
 
 ---
 # PACE: Execute 🤝
 
 **- Results and Evaluation:**
   
-  * In task 3 - Building visualizations: We explored the spread of values and the distribution for each ```count``` variable. Most of ``count`` variables are skewed to the right (except for ```video_duration_sec``` which resulted in a normal distribution).
+  * In task 3 - Building visualizations: We explored **the spread** of values and **the distribution** for each ```count``` variable. Most of ```count``` variables are **skewed to the right** (except for ```video_duration_sec``` which resulted in a normal distribution).
     
-  * Also in task 3, after investigating the median view counts by ban status, we noticed the median view counts for non-active authors are much greater than the median view counts for active authors. Since under review/banned authors are more likely to post claims, thus, their videos attract more views.
+  * Also in task 3, after investigating **the median view counts by ban status,** we noticed the median view counts for non-active authors are much greater than the median view counts for active authors. Since under review/banned authors are more likely to post claims, thus, their videos attract more views.
 
-  * In task 4 - Determine Outliers, because the values for the ```count``` variables are heavily skewed to the right as we examined in task 3, thus, defining an outlier by calculating the interquartile range (IQR) and set a threshold that is 1.5 * IQR above the 3rd quartile was the best solution to conduct.
+  * In task 4 - Determine Outliers: Because the values for the ```count``` variables are heavily skewed to the right as we examined in Task 3, defining an outlier by calculating the interquartile range (IQR) and setting a threshold that of 1.5 * IQR above the 3rd quartile was the best approach.
  
 
 **- Conclusions:** 
