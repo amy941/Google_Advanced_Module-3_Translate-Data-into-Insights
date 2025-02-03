@@ -65,6 +65,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 * video_download_count: max = ~15,000
 * video_comment_count: max = ~10,000
 
+⚠️⚠️⚠️ For more details, visit: [Case Study: TikTok](https://github.com/amy941/Google_Advanced_Module-3_Translate-Data-into-Insights/blob/main/Case%20Study_%20TikTok%20.ipynb)
 
 ---
 
