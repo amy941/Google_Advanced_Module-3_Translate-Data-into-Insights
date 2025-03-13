@@ -263,3 +263,8 @@ plt.show()
   * Exploratory Data Analysis (EDA) helps a data professional to get to know the data, understand its outliers, clean its missing values, and prepare it for future modeling.
 
   * Data viz helps me understand that we will need to make decisions on certain considerations before designing a model.
+
+---
+# CERTIFICATE
+
+![cert](https://github.com/user-attachments/assets/a1e194ec-a4bc-447d-bab0-5352e1d363ae)
